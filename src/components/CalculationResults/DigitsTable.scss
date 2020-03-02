@@ -1,0 +1,56 @@
+@import '../../styles/globals';
+
+.root {
+  &[data-mode="graph-digits-today"] {
+    margin: 20px 0;
+  }
+  @media #{$m-tablet-landscape-up} {
+    width: 40%;
+    min-width: 340px;
+  }
+  @media #{$m-tablet-landscape-down} {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  padding: 0 20px;
+  & > .header {
+    @include widget-header;
+  }
+  .digitsTable {
+    width: 100%;
+    border: 0;
+    .row {
+      &:first-child {
+        & > .cell {
+          padding: 0 15px 10px;
+        }
+      }
+      &:last-child {
+        & > .cell {
+          border-bottom: 0;
+          padding: 10px 15px 0;
+        }
+      }
+      &.willToday {
+        color: $will-color;
+      }
+      &.destinyToday {
+        color: $destiny-color;
+      }
+      & > .cell {
+        padding: 10px 15px;
+        border-bottom: 1px solid $table-border-color;
+        &.title {
+          width: 80%;
+        }
+        &.value {
+          width: 20%;
+        }
+      }
+    }
+  }
+}

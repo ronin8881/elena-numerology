@@ -1,0 +1,42 @@
+@import '../../styles/globals';
+
+.root {
+  @media #{$m-tablet-landscape-up} {
+    width: 40%;
+    min-width: 340px;
+  }
+  @media #{$m-tablet-landscape-down} {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 0 20px;
+
+  .header {
+    @include widget-header;
+  }
+  .matrix {
+    margin: 0 auto;
+    width: 300px;
+    .row {
+      & > .cell {
+        width: 100px;
+        height: 100px;
+        vertical-align: middle;
+        text-align: center;
+        &:nth-child(2) {
+          border-left: 2px solid $table-border-color;
+          border-right: 2px solid $table-border-color;
+        }
+      }
+      &:nth-child(2) {
+        & > .cell {
+          border-top: 2px solid $table-border-color;
+          border-bottom: 2px solid $table-border-color;
+        }
+      }
+    }
+  }
+}

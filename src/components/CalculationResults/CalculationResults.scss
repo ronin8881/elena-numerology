@@ -1,0 +1,29 @@
+@import '../../styles/globals';
+
+.root {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  & > .headerWrap {
+    width: 100%;
+    text-align: center;
+    & > .header {
+      @include widget-header;
+    }
+    & > .birthDate {
+      text-transform: none;
+    }
+  }
+
+  .resetButtonWrap {
+    margin: 20px 0 0 0;
+    width: 100%;
+    text-align: center;
+    .resetBtn {
+      @include form-button;
+    }
+  }
+
+}

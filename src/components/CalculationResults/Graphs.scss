@@ -1,0 +1,25 @@
+@import '../../styles/globals';
+
+.root {
+  width: 100%;
+  padding: 20px 20px 0;
+  & > .header {
+    @include widget-header;
+  }
+  .chartWrap {
+    border: 2px solid $table-border-color;
+    font-size: $chart-font-size;
+    width: 80%;
+    min-width: 300px;
+    @media #{$m-mobile} {
+      height: 200px;
+    }
+    @media #{$m-tablet-portrait} {
+      height: 350px;
+    }
+    @media #{$m-tablet-landscape-up} {
+      height: 500px;
+    }
+    margin: 0 auto;
+  }
+}

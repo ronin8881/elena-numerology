@@ -1,0 +1,26 @@
+@import '../../styles/globals';
+
+.root {
+  .form {
+    text-align: center;
+  }
+
+  .header {
+    text-align: center;
+    margin: 40px 0;
+    font-size: $widget-header-font-size;
+  }
+
+  .submitBtn {
+    @include form-button;
+  }
+
+  .dateInputWrap {
+    margin: 20px 0;
+    .dateInput {
+      @include text-input;
+      text-align: center;
+    }
+  }
+
+}

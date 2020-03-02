@@ -1,0 +1,36 @@
+@import '../styles/globals.scss';
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  body {
+    height: 100%;
+    background-color: $page-background;
+    margin: 0;
+    padding: 0;
+    color: $main-font-color;
+    font-size: $main-font-size;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    div {
+      box-sizing: border-box;
+    }
+
+    :global(#root) {
+      height: 100%;
+    }
+
+    .root {
+      @media #{$m-tablet-portrait-up}{
+        width: 80%;
+      }
+      @media #{$m-mobile}{
+        width: 100%;
+      }
+      min-height: 100%;
+      margin: 0 auto;
+      background-color: $app-background;
+      position: relative;
+    }
+  }
+}
