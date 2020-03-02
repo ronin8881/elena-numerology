@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -18,7 +18,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: npm run build --if-present
+    - run: npm run build
     - run: git clone https://github.com/ronin8881/ronin8881.github.io.git
     - run: cp dist/* ronin8881.github.io.git/
     - run: cd ronin8881.github.io.git/
