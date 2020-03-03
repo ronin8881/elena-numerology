@@ -23,6 +23,7 @@
     text-align: center;
     .resetBtn {
       @include form-button;
+      max-width: 80%;
     }
   }
 

@@ -12,6 +12,7 @@ html {
     font-size: $main-font-size;
     text-transform: uppercase;
     font-family: Arial, sans-serif;
+    min-width: $media-mobile-end;
     div {
       box-sizing: border-box;
     }
@@ -21,12 +22,11 @@ html {
     }
 
     .root {
-      @media #{$m-tablet-portrait-up}{
+      width: 100%;
+      @media #{$m-tablet-landscape-up}{
         width: 80%;
       }
-      @media #{$m-mobile}{
-        width: 100%;
-      }
+
       min-height: 100%;
       margin: 0 auto;
       background-color: $app-background;
