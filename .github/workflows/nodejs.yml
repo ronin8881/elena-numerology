@@ -20,8 +20,8 @@ jobs:
     - run: npm install
     - run: npm run build
     - run: git clone https://github.com/ronin8881/ronin8881.github.io.git
-    - run: cp dist/* ronin8881.github.io.git/
-    - run: cd ronin8881.github.io.git/
+    - run: cp dist/* ronin8881.github.io/
+    - run: cd ronin8881.github.io/
     - run: git commit -m "deploy commit"
     - run: git push -u origin master
       env:
