@@ -8,12 +8,12 @@
   & > .title {
     color: #ffffff;
     font-size: $page-header-font-size;
-    font-weight: bold;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     & > div {
       padding-left: 20px;
+      margin: 8px 0;
     }
   }
 }

@@ -9,8 +9,8 @@ function Header() {
     return (
         <div className={header}>
             <div className={title}>
-                <div>Психолог нумеролог</div>
                 <div>Елена Хлопцева</div>
+                <div>Психолог нумеролог</div>
             </div>
         </div>
     );
