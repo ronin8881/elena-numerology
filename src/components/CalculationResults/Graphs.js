@@ -83,7 +83,7 @@ function Graphs({birthDate}) {
                         x: rdX,
                         y: rdY,
                         label: moment(birthDate).add(rdX, 'years').format('DD.MM.YYYY'),
-                        offset: rdY >= yDomain[1] - 0.5 ? -15 : 15
+                        offset: rdY >= (yDomain[1] - 0.5) || refDots.length % 2 !== 0 && rdY >= (yDomain[0] + 0.5) ? -15 : 15
                     });
                 }
             }
